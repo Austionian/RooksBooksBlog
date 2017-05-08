@@ -67,5 +67,6 @@ theme: cactus-dark
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy: https://github.com/Austionian/RooksBooksBlog.git
-type: git
+deploy:
+type: heroko
+repo: https://git.heroku.com/rooks-books-blog.git
