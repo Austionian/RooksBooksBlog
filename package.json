@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "pretheme:update": "cd themes/cactus-dark",
-    "theme:update": "git add . && git commit -m 'update theme' && gp",
+    "theme:update": "git add . && git commit -m 'update theme' && git push",
     "posttheme:update": "cd ../.."
   },
   "hexo": {
