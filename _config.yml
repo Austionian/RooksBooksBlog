@@ -70,3 +70,4 @@ theme: cactus-dark
 deploy:
   type: heroku
   repo: git@heroku.com:rooks-books-blog.git
+  message: Deployment of Hexo blog to Heroku
