@@ -2,6 +2,11 @@
   "name": "hexo-site",
   "version": "0.0.0",
   "private": true,
+  "scripts": {
+    "pretheme:update": "cd themes/cactus-dark",
+    "theme:update": "git add . && git commit -m 'update theme' && gp",
+    "posttheme:update": "cd ../.."
+  },
   "hexo": {
     "version": "3.3.5"
   },
