@@ -1,6 +1,6 @@
 {
   "name": "rooks-books-blog",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "pretheme:update": "cd themes/cactus-dark",
