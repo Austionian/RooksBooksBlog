@@ -51,11 +51,9 @@ deploy:
   message: Deployment of Hexo blog to Heroku
 ```
 7. commit your changes and then why not try out a deploy
-  + `$ git add . && git commit -m "first deploy" && git push`(I wouldn't write like this.)
-  + use `$ hexo clean` to remove everything in `db.json` and `public/`
-  + then `$ hexo generate -deploy` to re-generate those static files and deploy to your Heroky app.
+  + commit your stuff
+  + then `$ hexo generate -deploy` to generate static files and deploy to your Heroku app.
 
-...and Happy Days
 ![](/images/brad-dance2.gif)
 
 There's other local environment things to set up as well, which can be found at this [helpful post](http://www.graymatterdeveloper.com/2016/01/05/setting-up/).
