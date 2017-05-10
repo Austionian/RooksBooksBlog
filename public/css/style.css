@@ -204,10 +204,6 @@
 .mx-auto-posts {
   margin-right: auto;
 }
-.about-writing {
-  margin-left: auto;
-  max-width: 38rem;
-}
 .p0 {
   padding: 0;
 }
@@ -1273,6 +1269,14 @@ article .content .caption {
 }
 .pagination a:hover:not(.active) {
   color: #eee;
+}
+#about {
+  margin-left: auto;
+  max-width: 38rem;
+}
+#writing {
+  margin-left: auto;
+  max-width: 38rem;
 }
 .highlight {
   color: #d1d9e1;
