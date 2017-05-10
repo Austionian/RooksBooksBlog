@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="This blog was a learning experience––firstly, because this was my first website all my own outside of GitHub Pages, secondly, because it’s with a CMS (Hexo, obviously) other than WordPress and hosted">
+<meta name="keywords" content="tech,Heroku,Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Creating a Hexo Blog with Heroku">
+<meta property="og:url" content="http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/index.html">
+<meta property="og:site_name" content="Rooks Blog">
+<meta property="og:description" content="This blog was a learning experience––firstly, because this was my first website all my own outside of GitHub Pages, secondly, because it’s with a CMS (Hexo, obviously) other than WordPress and hosted">
+<meta property="og:image" content="http://rooksbooksblog.com/images/brad-dance2.gif">
+<meta property="og:updated_time" content="2017-05-10T02:35:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Creating a Hexo Blog with Heroku">
+<meta name="twitter:description" content="This blog was a learning experience––firstly, because this was my first website all my own outside of GitHub Pages, secondly, because it’s with a CMS (Hexo, obviously) other than WordPress and hosted">
+<meta name="twitter:image" content="http://rooksbooksblog.com/images/brad-dance2.gif">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/pip-head2.png">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/pip-head2.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/pip-eight.png">
+          
+        
+    
+    <!-- title -->
+    <title>Creating a Hexo Blog with Heroku</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/austionian">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/&text=Creating a Hexo Blog with Heroku"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/&title=Creating a Hexo Blog with Heroku"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/&is_video=false&description=Creating a Hexo Blog with Heroku"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Creating a Hexo Blog with Heroku&body=Check out this article: http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/&title=Creating a Hexo Blog with Heroku"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/&title=Creating a Hexo Blog with Heroku"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/&title=Creating a Hexo Blog with Heroku"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/&title=Creating a Hexo Blog with Heroku"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/&name=Creating a Hexo Blog with Heroku&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Reasons-I-chose-Hexo"><span class="toc-number">1.</span> <span class="toc-text">Reasons I chose Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Process"><span class="toc-number">2.</span> <span class="toc-text">The Process</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Heroku-and-how-to-deploy-Hexo-to-it-in-7-easy-steps"><span class="toc-number">3.</span> <span class="toc-text">Heroku, and how to deploy Hexo to it in 7 easy steps</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Toubleshooting-Tips-I-Learned-Along-the-Way"><span class="toc-number"></span> <span class="toc-text">Toubleshooting Tips I Learned Along the Way</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Error"><span class="toc-number">1.</span> <span class="toc-text">The Error:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Fix"><span class="toc-number">2.</span> <span class="toc-text">The Fix:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Error-1"><span class="toc-number">3.</span> <span class="toc-text">The Error:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Fix-1"><span class="toc-number">4.</span> <span class="toc-text">The Fix:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Error-2"><span class="toc-number">5.</span> <span class="toc-text">The Error:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Fix-2"><span class="toc-number">6.</span> <span class="toc-text">The Fix:</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Creating a Hexo Blog with Heroku
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Rooks Blog</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-05-09T20:04:01.000Z" itemprop="datePublished">2017 May 09</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Heroku/">Heroku</a>, <a class="tag-link" href="/tags/Hexo/">Hexo</a>, <a class="tag-link" href="/tags/tech/">tech</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>This blog was a learning experience––firstly, because this was my first website all my own outside of GitHub Pages, secondly, because it’s with a CMS (<a href="hexo.io">Hexo</a>, obviously) other than WordPress and hosted on <a href="heroku.com">Heroku</a>. This isn’t my first experience with Heroku, but it is as a from scratch enterprise.</p>
+<h2 id="Reasons-I-chose-Hexo"><a href="#Reasons-I-chose-Hexo" class="headerlink" title="Reasons I chose Hexo"></a>Reasons I chose Hexo</h2><p>No reason really. Looked over the docs, looked simple enough and I liked being able to create blog posts with <a href="https://en.wikipedia.org/wiki/Markdown" target="_blank" rel="external">markdown</a> and the simple looking deploys.</p>
+<h2 id="The-Process"><a href="#The-Process" class="headerlink" title="The Process"></a>The Process</h2><p>I originally intended to doing something like this with GitHub Pages, I created a repo, set up Hexo, found this nifty <a href="https://github.com/probberechts/cactus-dark" target="_blank" rel="external">theme</a>, and was all set… then I found out Jekyll is pretty picky about themes when you have a <code>config.yml</code> with something like:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme:cactus-dark</div></pre></td></tr></table></figure></p>
+<p>You think you’re set and you’re served a build error:</p>
+<blockquote>
+<p>The page build completed successfully, but returned the following warning for the <code>master</code> branch:<br><br><br>You are attempting to use a Jekyll theme, “cactus-dark”, which is not supported by GitHub Pages. Please visit <a href="https://pages.github.com/themes/" target="_blank" rel="external">https://pages.github.com/themes/</a> for a list of supported themes</p>
+</blockquote>
+<p>And alas Jekyll themes are circa 2012 and look like it. So new plan, I’ll host with something else.</p>
+<h2 id="Heroku-and-how-to-deploy-Hexo-to-it-in-7-easy-steps"><a href="#Heroku-and-how-to-deploy-Hexo-to-it-in-7-easy-steps" class="headerlink" title="Heroku, and how to deploy Hexo to it in 7 easy steps"></a>Heroku, and how to deploy Hexo to it in 7 easy steps</h2><p>Hexo doesn’t do a great job explaining the deployment process to Heroku, it gives you the deployment config documentation and then nothing. And pouring through the Heroku documentation can be a bit of a slog, and obviously has no Hexo-centric info. So lets talk about it. Once you have a repo with your blog and create a Node.js Heroku app (which is super simple from Heroku’s UI) follow these steps:</p>
+<ol>
+<li>login in to your Heroku account from your terminal <code>$ heroku login</code></li>
+<li>remove <code>public/</code> from the .gitignore<ul>
+<li>when you run <code>$ hexo generate</code> Hexo generates static files of your blog and puts them in the <code>public/</code> directory</li>
+<li>once <code>public/</code> is no longer ignored, Heroku can see the files it needs to host your site</li>
+</ul>
+</li>
+<li><p>add <code>engines</code> to your <code>package.json</code>, it seems odd they’re not there out of the box with Hexo. It should look like:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&quot;engines&quot;: &#123;</div><div class="line">  &quot;node&quot;: &quot;7.1.0&quot;,</div><div class="line">  &quot;npm&quot;: &quot;3.10.9&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>add Hexo’s offical hexo-deployer-heroku plugin</p>
+<ul>
+<li><code>$ npm install hexo-deployer-heroku --save</code></li>
+</ul>
+</li>
+<li><span id="number5"></span>create a public SSH key so you can deploy to Heroku<ul>
+<li><code>$ ssh-keygen -t rsa</code> will create the key</li>
+<li>then <code>$ heroku keys:add</code> adds that key to your Heroku account</li>
+<li>you can then use <code>$ ssh -v git@heroku.com</code> to validate your connection</li>
+</ul>
+</li>
+<li><p>add your configuration settings to your <code>_config.yml</code> file, it should look something like:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: heroku</div><div class="line">  repo: https://git.heroku.com/YOUR-APP-NAME-HERE.git</div><div class="line">  message: Deployment of Hexo blog to Heroku</div></pre></td></tr></table></figure>
+</li>
+<li><p>commit your changes and then why not try out a deploy</p>
+<ul>
+<li>commit your stuff</li>
+<li>then <code>$ hexo generate -deploy</code> to generate static files and deploy to your Heroku app.</li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/brad-dance2.gif" alt=""></p>
+<p>There’s other local environment things to set up as well, which can be found at this <a href="http://www.graymatterdeveloper.com/2016/01/05/setting-up/" target="_blank" rel="external">helpful post</a>.</p>
+<hr>
+<h1 id="Toubleshooting-Tips-I-Learned-Along-the-Way"><a href="#Toubleshooting-Tips-I-Learned-Along-the-Way" class="headerlink" title="Toubleshooting Tips I Learned Along the Way"></a>Toubleshooting Tips I Learned Along the Way</h1><h2 id="The-Error"><a href="#The-Error" class="headerlink" title="The Error:"></a>The Error:</h2><blockquote>
+<p>remote: —–&gt; Failed to detect app matching <a href="https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/nodejs.tgz" target="_blank" rel="external">https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/nodejs.tgz</a> buildpack<br>remote:        More info: <a href="https://devcenter.heroku.com/articles/buildpacks#detection-failure" target="_blank" rel="external">https://devcenter.heroku.com/articles/buildpacks#detection-failure</a></p>
+</blockquote>
+<h2 id="The-Fix"><a href="#The-Fix" class="headerlink" title="The Fix:"></a>The Fix:</h2><p>Run:<br><code>$ heroku buildpacks:remove heroku/nodejs -a rooks-books-blog</code><br>Yeah, that’s it, and Heroku will give you this nice little response:<br>“Buildpack removed. Next release on YOUR-APP-NAME-HERE will detect buildpack normally.” …as if the buildpack was unnatural that whole time.</p>
+<p>Also documented <a href="https://github.com/hexojs/hexo-deployer-heroku/issues/2" target="_blank" rel="external">here</a><br><br></p>
+<h2 id="The-Error-1"><a href="#The-Error-1" class="headerlink" title="The Error:"></a>The Error:</h2><blockquote>
+<p>‘Permission denied (publickey). fatal: Could not read from remote repository.’</p>
+</blockquote>
+<h2 id="The-Fix-1"><a href="#The-Fix-1" class="headerlink" title="The Fix:"></a>The Fix:</h2><p>Please see <a href="#number5">^number 5 above^</a><br><br></p>
+<h2 id="The-Error-2"><a href="#The-Error-2" class="headerlink" title="The Error:"></a>The Error:</h2><blockquote>
+<p>The page build failed with the following error:<br>“The submodule <code>EXAMPLE_SUBMODULE</code> was not properly initialized with a <code>.gitmodules</code> file.</p>
+</blockquote>
+<h2 id="The-Fix-2"><a href="#The-Fix-2" class="headerlink" title="The Fix:"></a>The Fix:</h2><p>GitHub says:</p>
+<blockquote>
+<p>In the submodule’s directory, run <code>$ git submodule init</code>, then <code>$ git submodule update</code>.<br>Commit and push your changes to trigger another build on the server.</p>
+</blockquote>
+<p>That didn’t work for me.</p>
+<p>The bottom line is if you install a theme make sure you install it as <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules" target="_blank" rel="external">submodule</a>. A lot of themes’ <code>README.md</code>s say to just:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git clone https://github.com/probberechts/cactus-dark.git themes/cactus-dark</div></pre></td></tr></table></figure></p>
+<p>and update the <code>config.yml</code> theme.</p>
+<p>I would recommend first forking the theme you want, so you can make changes to it of your own. Once you’ve done that, run:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git submodule add https://github.com/YOUR-GITHUB-USERNAME-HERE/cactus-dark.git themes/cactus-dark</div></pre></td></tr></table></figure></p>
+<p>Now whenever you make a change within the submodule you commit it seperately, but hell, it’s worth it for the freedom of owning the theme.</p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/austionian">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Reasons-I-chose-Hexo"><span class="toc-number">1.</span> <span class="toc-text">Reasons I chose Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Process"><span class="toc-number">2.</span> <span class="toc-text">The Process</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Heroku-and-how-to-deploy-Hexo-to-it-in-7-easy-steps"><span class="toc-number">3.</span> <span class="toc-text">Heroku, and how to deploy Hexo to it in 7 easy steps</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Toubleshooting-Tips-I-Learned-Along-the-Way"><span class="toc-number"></span> <span class="toc-text">Toubleshooting Tips I Learned Along the Way</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Error"><span class="toc-number">1.</span> <span class="toc-text">The Error:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Fix"><span class="toc-number">2.</span> <span class="toc-text">The Fix:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Error-1"><span class="toc-number">3.</span> <span class="toc-text">The Error:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Fix-1"><span class="toc-number">4.</span> <span class="toc-text">The Fix:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Error-2"><span class="toc-number">5.</span> <span class="toc-text">The Error:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Fix-2"><span class="toc-number">6.</span> <span class="toc-text">The Fix:</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/&text=Creating a Hexo Blog with Heroku"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/&title=Creating a Hexo Blog with Heroku"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/&is_video=false&description=Creating a Hexo Blog with Heroku"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Creating a Hexo Blog with Heroku&body=Check out this article: http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/&title=Creating a Hexo Blog with Heroku"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/&title=Creating a Hexo Blog with Heroku"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/&title=Creating a Hexo Blog with Heroku"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/&title=Creating a Hexo Blog with Heroku"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/&name=Creating a Hexo Blog with Heroku&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Austin Rooks
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/austionian">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
