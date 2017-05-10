@@ -316,6 +316,9 @@
   padding-left: 4rem;
   padding-right: 4rem;
 }
+.margin-left {
+  margin-left: 5rem;
+}
 .content h1,
 .content .h1 {
   letter-spacing: 0.01em;
@@ -414,12 +417,12 @@
 }
 .content table {
   width: 100%;
-  font-size: 12px;
+  font-size: 13px;
   border-collapse: collapse;
   text-align: left;
 }
 .content th {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
   color: #eee;
   border-bottom: 1px dashed #ccc;
@@ -443,7 +446,7 @@ html {
 body {
   color: #c9cacc;
   background-color: #1d1f21;
-  font-size: 14px;
+  font-size: 15px;
   font-family: "Menlo", "Meslo LG", monospace;
   font-weight: 400;
   line-height: 1.725;
@@ -545,12 +548,12 @@ body {
 #header {
   max-width: 710px;
   width: 100%;
-  margin: 0 auto 3rem auto;
+  margin: 0 auto 3rem 5rem;
 }
 #header h1,
 #header .h1 {
   letter-spacing: 0.01em;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   line-height: 2rem;
   font-style: normal;
   font-weight: 700;
@@ -569,24 +572,24 @@ body {
   display: inline-block;
   float: left;
   margin-right: 20px;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   background-repeat: no-repeat;
-  background-size: 50px 50px;
+  background-size: 60px 60px;
   border-radius: 5px;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
 #header #nav {
   letter-spacing: 0.01em;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 200;
   color: #2bbc8a;
 }
 #header #nav ul {
   list-style-type: none;
-  margin: 0;
+  margin: 10px 0 0 0;
   padding: 0;
   line-height: 15px;
 }
@@ -622,8 +625,8 @@ body {
 }
 @media screen and (max-width: 480px) {
   #header #title {
-    padding-top: 9px;
-    padding-bottom: 9px;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
   #header #nav ul a:hover {
     background: none;
@@ -643,7 +646,7 @@ body {
   }
   #header #nav li:not(:first-child) {
     padding-top: 1rem;
-    padding-left: 70px;
+    padding-left: 80px;
     font-size: 1rem;
   }
 }
@@ -767,7 +770,7 @@ body {
   clear: both;
   text-align: right;
   padding-top: 1rem;
-  max-width: 20em;
+  max-width: 17em;
   float: right;
 }
 #header-post #toc a:hover {
