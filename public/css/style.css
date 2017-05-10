@@ -201,6 +201,13 @@
   margin-left: auto;
   margin-right: auto;
 }
+.mx-auto-posts {
+  margin-right: auto;
+}
+.about-writing {
+  margin-left: auto;
+  max-width: 38rem;
+}
 .p0 {
   padding: 0;
 }
@@ -527,6 +534,10 @@ body {
   width: 100%;
   max-width: 39rem;
 }
+.width-posts {
+  width: 100%;
+  max-width: 60rem;
+}
 @media (max-width: 480px) {
   .px3 {
     padding-left: 1rem;
@@ -543,9 +554,9 @@ body {
   }
 }
 #header {
-  max-width: 710px;
+  max-width: 44em;
   width: 100%;
-  margin: 0 auto 3rem auto;
+  margin: 0 0 3rem auto;
 }
 #header h1,
 #header .h1 {
