@@ -7,14 +7,14 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="This blog was a learning experience––firstly, because this was my first website all my own outside of GitHub Pages, secondly, because it’s with a CMS (Hexo, obviously) other than WordPress and hosted">
-<meta name="keywords" content="tech">
+<meta name="keywords" content="tech,Heroku,Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Creating a Hexo Blog with Heroku">
 <meta property="og:url" content="http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/index.html">
 <meta property="og:site_name" content="Rooks&#39;s Books Blog">
 <meta property="og:description" content="This blog was a learning experience––firstly, because this was my first website all my own outside of GitHub Pages, secondly, because it’s with a CMS (Hexo, obviously) other than WordPress and hosted">
 <meta property="og:image" content="http://rooksbooksblog.com/images/brad-dance2.gif">
-<meta property="og:updated_time" content="2017-05-09T22:22:06.000Z">
+<meta property="og:updated_time" content="2017-05-10T02:35:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Creating a Hexo Blog with Heroku">
 <meta name="twitter:description" content="This blog was a learning experience––firstly, because this was my first website all my own outside of GitHub Pages, secondly, because it’s with a CMS (Hexo, obviously) other than WordPress and hosted">
@@ -126,7 +126,7 @@
       
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/tech/">tech</a>
+        <a class="tag-link" href="/tags/Heroku/">Heroku</a>, <a class="tag-link" href="/tags/Hexo/">Hexo</a>, <a class="tag-link" href="/tags/tech/">tech</a>
     </div>
 
 
@@ -135,8 +135,8 @@
   
 
   <div class="content" itemprop="articleBody">
-    <p>This blog was a learning experience––firstly, because this was my first website all my own outside of GitHub Pages, secondly, because it’s with a CMS (Hexo, obviously) other than WordPress and hosted on Heroku. This isn’t my first experience with Heroku, but it is as a from scratch enterprise.</p>
-<h2 id="Reasons-I-chose-Hexo"><a href="#Reasons-I-chose-Hexo" class="headerlink" title="Reasons I chose Hexo"></a>Reasons I chose Hexo</h2><p>No reason really. Looked over the docs, looked simple enough and I liked being able to create blog posts with <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank" rel="external">markdown</a> and the simple looking deploys.</p>
+    <p>This blog was a learning experience––firstly, because this was my first website all my own outside of GitHub Pages, secondly, because it’s with a CMS (<a href="hexo.io">Hexo</a>, obviously) other than WordPress and hosted on <a href="heroku.com">Heroku</a>. This isn’t my first experience with Heroku, but it is as a from scratch enterprise.</p>
+<h2 id="Reasons-I-chose-Hexo"><a href="#Reasons-I-chose-Hexo" class="headerlink" title="Reasons I chose Hexo"></a>Reasons I chose Hexo</h2><p>No reason really. Looked over the docs, looked simple enough and I liked being able to create blog posts with <a href="https://en.wikipedia.org/wiki/Markdown" target="_blank" rel="external">markdown</a> and the simple looking deploys.</p>
 <h2 id="The-Process"><a href="#The-Process" class="headerlink" title="The Process"></a>The Process</h2><p>I originally intended to doing something like this with GitHub Pages, I created a repo, set up Hexo, found this nifty <a href="https://github.com/probberechts/cactus-dark" target="_blank" rel="external">theme</a>, and was all set… then I found out Jekyll is pretty picky about themes when you have a <code>config.yml</code> with something like:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme:cactus-dark</div></pre></td></tr></table></figure></p>
 <p>You think you’re set and you’re served a build error:</p>
 <blockquote>
@@ -181,8 +181,8 @@
 <h1 id="Toubleshooting-Tips-I-Learned-Along-the-Way"><a href="#Toubleshooting-Tips-I-Learned-Along-the-Way" class="headerlink" title="Toubleshooting Tips I Learned Along the Way"></a>Toubleshooting Tips I Learned Along the Way</h1><h2 id="The-Error"><a href="#The-Error" class="headerlink" title="The Error:"></a>The Error:</h2><blockquote>
 <p>remote: —–&gt; Failed to detect app matching <a href="https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/nodejs.tgz" target="_blank" rel="external">https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/nodejs.tgz</a> buildpack<br>remote:        More info: <a href="https://devcenter.heroku.com/articles/buildpacks#detection-failure" target="_blank" rel="external">https://devcenter.heroku.com/articles/buildpacks#detection-failure</a></p>
 </blockquote>
-<h2 id="The-Fix"><a href="#The-Fix" class="headerlink" title="The Fix:"></a>The Fix:</h2><p><code>$ heroku buildpacks:remove heroku/nodejs -a rooks-books-blog</code><br>Yup, that’s it, and Heroku will give you this nice little response:<br>“Buildpack removed. Next release on YOUR-APP-NAME-HERE will detect buildpack normally.” …as if the buildpack was unnatural that whole time.</p>
-<p>Also found <a href="https://github.com/hexojs/hexo-deployer-heroku/issues/2" target="_blank" rel="external">here</a><br><br></p>
+<h2 id="The-Fix"><a href="#The-Fix" class="headerlink" title="The Fix:"></a>The Fix:</h2><p>Run:<br><code>$ heroku buildpacks:remove heroku/nodejs -a rooks-books-blog</code><br>Yeah, that’s it, and Heroku will give you this nice little response:<br>“Buildpack removed. Next release on YOUR-APP-NAME-HERE will detect buildpack normally.” …as if the buildpack was unnatural that whole time.</p>
+<p>Also documented <a href="https://github.com/hexojs/hexo-deployer-heroku/issues/2" target="_blank" rel="external">here</a><br><br></p>
 <h2 id="The-Error-1"><a href="#The-Error-1" class="headerlink" title="The Error:"></a>The Error:</h2><blockquote>
 <p>‘Permission denied (publickey). fatal: Could not read from remote repository.’</p>
 </blockquote>

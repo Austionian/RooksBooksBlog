@@ -1,14 +1,17 @@
 ---
 title: Creating a Hexo Blog with Heroku
 date: 2017-05-09 15:04:01
-tags: tech
+tags:
+- tech
+- Heroku
+- Hexo
 ---
 
-This blog was a learning experience––firstly, because this was my first website all my own outside of GitHub Pages, secondly, because it's with a CMS (Hexo, obviously) other than WordPress and hosted on Heroku. This isn't my first experience with Heroku, but it is as a from scratch enterprise.
+This blog was a learning experience––firstly, because this was my first website all my own outside of GitHub Pages, secondly, because it's with a CMS ([Hexo](hexo.io), obviously) other than WordPress and hosted on [Heroku](heroku.com). This isn't my first experience with Heroku, but it is as a from scratch enterprise.
 
 ## Reasons I chose Hexo
 
-No reason really. Looked over the docs, looked simple enough and I liked being able to create blog posts with [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and the simple looking deploys.
+No reason really. Looked over the docs, looked simple enough and I liked being able to create blog posts with [markdown](https://en.wikipedia.org/wiki/Markdown) and the simple looking deploys.
 
 ## The Process
 
@@ -66,11 +69,12 @@ There's other local environment things to set up as well, which can be found at 
 remote:        More info: https://devcenter.heroku.com/articles/buildpacks#detection-failure
 
 ## The Fix:
+Run:
 `$ heroku buildpacks:remove heroku/nodejs -a rooks-books-blog`
-Yup, that's it, and Heroku will give you this nice little response:
+Yeah, that's it, and Heroku will give you this nice little response:
 "Buildpack removed. Next release on YOUR-APP-NAME-HERE will detect buildpack normally." ...as if the buildpack was unnatural that whole time.
 
-Also found [here](https://github.com/hexojs/hexo-deployer-heroku/issues/2)
+Also documented [here](https://github.com/hexojs/hexo-deployer-heroku/issues/2)
 <br />
 ## The Error:
 >'Permission denied (publickey). fatal: Could not read from remote repository.'
