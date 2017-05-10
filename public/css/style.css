@@ -201,9 +201,6 @@
   margin-left: auto;
   margin-right: auto;
 }
-.mx-auto-posts {
-  margin-right: auto;
-}
 .p0 {
   padding: 0;
 }
@@ -528,11 +525,7 @@ body {
 }
 .width {
   width: 100%;
-  max-width: 39rem;
-}
-.width-posts {
-  width: 100%;
-  max-width: 60rem;
+  max-width: 48rem;
 }
 @media (max-width: 480px) {
   .px3 {
@@ -550,9 +543,9 @@ body {
   }
 }
 #header {
-  max-width: 44em;
+  max-width: 710px;
   width: 100%;
-  margin: 0 0 3rem auto;
+  margin: 0 auto 3rem auto;
 }
 #header h1,
 #header .h1 {
@@ -1069,6 +1062,7 @@ article .content h2:before {
 }
 article .content img,
 article .content video {
+  max-height: 300px;
   max-width: 100%;
   height: auto;
   display: block;
@@ -1269,14 +1263,6 @@ article .content .caption {
 }
 .pagination a:hover:not(.active) {
   color: #eee;
-}
-#about {
-  margin-left: auto;
-  max-width: 38rem;
-}
-#writing {
-  margin-left: auto;
-  max-width: 38rem;
 }
 .highlight {
   color: #d1d9e1;
