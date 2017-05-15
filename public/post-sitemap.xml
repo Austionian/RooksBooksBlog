@@ -7,8 +7,16 @@
     </url>
 
     <url>
+        <loc>http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/</loc>
+        <lastmod>2017-05-15T21:45:10.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://rooksbooksblog.com/2017/05/09/Creating-a-Hexo-Blog/</loc>
-        <lastmod>2017-05-10T02:35:37.000Z</lastmod>
+        <lastmod>2017-05-15T21:44:02.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

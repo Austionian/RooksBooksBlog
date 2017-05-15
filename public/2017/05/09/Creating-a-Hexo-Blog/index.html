@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Rooks Blog">
 <meta property="og:description" content="This blog was a learning experience––firstly, because this was my first website all my own outside of GitHub Pages, secondly, because it’s with a CMS (Hexo, obviously) other than WordPress and hosted">
 <meta property="og:image" content="http://rooksbooksblog.com/images/brad-dance2.gif">
-<meta property="og:updated_time" content="2017-05-10T02:35:37.000Z">
+<meta property="og:updated_time" content="2017-05-15T21:44:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Creating a Hexo Blog with Heroku">
 <meta name="twitter:description" content="This blog was a learning experience––firstly, because this was my first website all my own outside of GitHub Pages, secondly, because it’s with a CMS (Hexo, obviously) other than WordPress and hosted">
@@ -69,6 +69,8 @@
     <br/>
     <span id="actions">
       <ul>
+        
+        <li><a class="icon" href="/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
         
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
@@ -142,7 +144,7 @@
 <blockquote>
 <p>The page build completed successfully, but returned the following warning for the <code>master</code> branch:<br><br><br>You are attempting to use a Jekyll theme, “cactus-dark”, which is not supported by GitHub Pages. Please visit <a href="https://pages.github.com/themes/" target="_blank" rel="external">https://pages.github.com/themes/</a> for a list of supported themes</p>
 </blockquote>
-<p>And alas Jekyll themes are circa 2012 and look like it. So new plan, I’ll host with something else.</p>
+<p>And alas Jekyll themes are circa 2012 and look like it. While I’m sure there’s a way around this, I didn’t really want to find it––so new plan, I’ll host with something else.</p>
 <h2 id="Heroku-and-how-to-deploy-Hexo-to-it-in-7-easy-steps"><a href="#Heroku-and-how-to-deploy-Hexo-to-it-in-7-easy-steps" class="headerlink" title="Heroku, and how to deploy Hexo to it in 7 easy steps"></a>Heroku, and how to deploy Hexo to it in 7 easy steps</h2><p>Hexo doesn’t do a great job explaining the deployment process to Heroku, it gives you the deployment config documentation and then nothing. And pouring through the Heroku documentation can be a bit of a slog, and obviously has no Hexo-centric info. So lets talk about it. Once you have a repo with your blog and create a Node.js Heroku app (which is super simple from Heroku’s UI) follow these steps:</p>
 <ol>
 <li>login in to your Heroku account from your terminal <code>$ heroku login</code></li>
@@ -152,7 +154,7 @@
 </ul>
 </li>
 <li><p>add <code>engines</code> to your <code>package.json</code>, it seems odd they’re not there out of the box with Hexo. It should look like:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&quot;engines&quot;: &#123;</div><div class="line">  &quot;node&quot;: &quot;7.1.0&quot;,</div><div class="line">  &quot;npm&quot;: &quot;3.10.9&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">"engines": &#123;</div><div class="line">  "node": "7.1.0",</div><div class="line">  "npm": "3.10.9"</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 <li><p>add Hexo’s offical hexo-deployer-heroku plugin</p>
 <ul>

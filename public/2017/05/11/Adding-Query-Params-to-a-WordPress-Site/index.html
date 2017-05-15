@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="WordPress can be a pain in the butt to work with, mostly because, for all that you can do (which albeit is a lot), you’re best off doing it (as an old friend would say) within its guardrails––that is">
+<meta name="keywords" content="tech,WordPress,Query Params">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Adding Query Params to a WordPress Site">
+<meta property="og:url" content="http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/index.html">
+<meta property="og:site_name" content="Rooks Blog">
+<meta property="og:description" content="WordPress can be a pain in the butt to work with, mostly because, for all that you can do (which albeit is a lot), you’re best off doing it (as an old friend would say) within its guardrails––that is">
+<meta property="og:image" content="http://rooksbooksblog.com/images/lynch2.gif">
+<meta property="og:image" content="http://rooksbooksblog.com/images/lynch1.gif">
+<meta property="og:updated_time" content="2017-05-15T21:45:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Adding Query Params to a WordPress Site">
+<meta name="twitter:description" content="WordPress can be a pain in the butt to work with, mostly because, for all that you can do (which albeit is a lot), you’re best off doing it (as an old friend would say) within its guardrails––that is">
+<meta name="twitter:image" content="http://rooksbooksblog.com/images/lynch2.gif">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/pip-head2.png">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/pip-head2.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/pip-eight.png">
+          
+        
+    
+    <!-- title -->
+    <title>Adding Query Params to a WordPress Site</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/austionian">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2017/05/09/Creating-a-Hexo-Blog/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/&text=Adding Query Params to a WordPress Site"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/&title=Adding Query Params to a WordPress Site"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/&is_video=false&description=Adding Query Params to a WordPress Site"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Adding Query Params to a WordPress Site&body=Check out this article: http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/&title=Adding Query Params to a WordPress Site"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/&title=Adding Query Params to a WordPress Site"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/&title=Adding Query Params to a WordPress Site"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/&title=Adding Query Params to a WordPress Site"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/&name=Adding Query Params to a WordPress Site&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Background"><span class="toc-number">1.</span> <span class="toc-text">Background</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Query"><span class="toc-number">2.</span> <span class="toc-text">The Query</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Javascript"><span class="toc-number">3.</span> <span class="toc-text">The Javascript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Results-Implications"><span class="toc-number">4.</span> <span class="toc-text">Results/ Implications</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Adding Query Params to a WordPress Site
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Rooks Blog</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-05-11T20:40:42.000Z" itemprop="datePublished">2017 May 11</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Query-Params/">Query Params</a>, <a class="tag-link" href="/tags/WordPress/">WordPress</a>, <a class="tag-link" href="/tags/tech/">tech</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><a href="https://wordpress.com/" title="WordPress&#39;s Homepage" target="_blank" rel="external">WordPress</a> can be a pain in the butt to work with, mostly because, for all that you can do (which albeit is a lot), you’re best off doing it (as an old friend would say) within its guardrails––that is either with pre-baked components with input forms or with plugins (that might just break your website).</p>
+<p>What was that?</p>
+<p><img src="/images/lynch2.gif" alt="David Lynch says, &quot;What?&quot;"></p>
+<p>It powers 27% of the Internet.</p>
+<p>OK. Custom code be damned. (But not really.)</p>
+<p>What follows is a super simple implementation of vanilla Javascript on a WordPress site.</p>
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>During a recent project, the client (an foreign-language-immersion daycare) wanted their WordPress site to show different prices for different locations, but they didn’t want it to be obvious that different prices we’re being shown for the same class. (They didn’t want people asking to get the lower price.)</p>
+<h2 id="The-Query"><a href="#The-Query" class="headerlink" title="The Query"></a>The Query</h2><p>The first thing to do is add the query to link. This was easy enough in this case for each unique class there was a unique button to a learn more page that covered the different classes for that age group across all their locations. So the links already looked like:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">...programs/infants/</div></pre></td></tr></table></figure></p>
+<p>all I had to do was add the query param:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">...programs/infants/?location=enfield</div></pre></td></tr></table></figure></p>
+<p>I was able to hard code it in because the client had a table with all their classes separated by locations.</p>
+<h2 id="The-Javascript"><a href="#The-Javascript" class="headerlink" title="The Javascript"></a>The Javascript</h2><p>First things first, we’ll have to lay the groundwork for the scripts. I’m going to create an object with called <code>prices</code> and breakdown the different products (in my case number of days at daycare per week) by location, that will look something like:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> prices = &#123;</div><div class="line">    <span class="attr">threeDay</span>: &#123;</div><div class="line">      <span class="attr">enfield</span>: <span class="string">'$825'</span>,</div><div class="line">      <span class="attr">boston</span>: <span class="string">'$799'</span>,</div><div class="line">      <span class="attr">tucson</span>: <span class="string">'$815'</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">fourDay</span>: &#123;</div><div class="line">      <span class="attr">enfield</span>: <span class="string">'$1,010'</span>,</div><div class="line">      <span class="attr">boston</span>: <span class="string">'$938'</span>,</div><div class="line">      <span class="attr">tucson</span>: <span class="string">'$999'</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">fiveDay</span>: &#123;</div><div class="line">      <span class="attr">enfield</span>: <span class="string">'$1,090'</span>,</div><div class="line">      <span class="attr">boston</span>: <span class="string">'$1,065'</span>,</div><div class="line">      <span class="attr">tucson</span>: <span class="string">'$1,080'</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+<p>And then I’m also going to find the elements on the page (in this case the pricing table) where I’ll be populating with information driven by the query parameter.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> threeDay = <span class="built_in">document</span>.getElementById(<span class="string">'three-day'</span>);</div><div class="line"><span class="keyword">const</span> fourDay = <span class="built_in">document</span>.getElementById(<span class="string">'four-day'</span>);</div><div class="line"><span class="keyword">const</span> fiveDay = <span class="built_in">document</span>.getElementById(<span class="string">'five-day'</span>);</div></pre></td></tr></table></figure></p>
+<p>Now the interesting part: since the query param is in the link, we have to find it and parse it, then display information on a pricing table that’s driven by it. Thankfully, WordPress allows Custom JS to be added to pages. So first step get the param:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getUrlParameter</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">    name = name.replace(<span class="regexp">/[\[]/</span>, <span class="string">'\\['</span>).replace(<span class="regexp">/[\]]/</span>, <span class="string">'\\]'</span>);</div><div class="line">    <span class="keyword">var</span> regex = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'[\\?&amp;]'</span> + name + <span class="string">'=([^&amp;#]*)'</span>);</div><div class="line">    <span class="keyword">var</span> results = regex.exec(location.search);</div><div class="line">    <span class="keyword">return</span> results === <span class="literal">null</span> ? <span class="string">''</span> : <span class="built_in">decodeURIComponent</span>(results[<span class="number">1</span>].replace(<span class="regexp">/\+/g</span>, <span class="string">' '</span>));</div><div class="line">  &#125;;</div></pre></td></tr></table></figure></p>
+<p>When the function is passed ‘location’ as an argument it will return the results, which in the case of <code>...programs/infants/?location=enfield</code>, results will be enfield.</p>
+<p>Once I have that, I can create a function that will take that location as an arugment and sort through my <code>prices</code> object and find that location, something like:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">definition1</span>(<span class="params">location</span>) </span>&#123;</div><div class="line">    location = location || <span class="string">'enfield'</span></div><div class="line">    <span class="keyword">return</span> prices.threeDay[location];</div><div class="line">  &#125;</div></pre></td></tr></table></figure></p>
+<p>Do that for each of the ‘products’ and now you have only to write the information to the page. The safety net above is that I’m setting the location to equal the location or <code>enfield</code>, estentially setting a default value in case someone comes to the page without a query param in the URL.</p>
+<p>Now I just have to tie it all together:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"DOMContentLoaded"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">    threeDay.innerHTML = definition1(getUrlParameter(<span class="string">'location'</span>));</div><div class="line">    fourDay.innerHTML = definition2(getUrlParameter(<span class="string">'location'</span>));</div><div class="line">    fiveDay.innerHTML = definition3(getUrlParameter(<span class="string">'location'</span>));</div><div class="line">  &#125;);</div></pre></td></tr></table></figure></p>
+<p>As you can see, I take the variable that I created earlier with the element’s id and append the DOC with innerHTML––the <code>getUrlParameter</code> function returns a location, the <code>definition</code> functions use that returned location to return a string from the <code>prices</code> object with the price for the location that the user had clicked on.</p>
+<p>To add all this to a WordPress page, you’ll have to wrap all your code in <code>&lt;script&gt;</code> tags as if it were all inline Javascript because––WordPress. And while it could make sense to abstract it more (i.e. not hardcode functions to find a value in an object, or abstract the object one more and include class types like Infant, Toddler etc.) keeping the Javascript separated by page keeps the WordPress feel––I could theoretically share how to update the object with the non-technical client if their prices change in the future.</p>
+<p><img src="/images/lynch1.gif" alt="David Lynch approves"></p>
+<center>(David Lynch approves!)</center>
+
+<h2 id="Results-Implications"><a href="#Results-Implications" class="headerlink" title="Results/ Implications"></a>Results/ Implications</h2><p>A certain drawback to this implementation was that there was really no way a user was going to be able to tell that the pricing table on a classes page was different depending on which link they came from. While this is what the client wanted, it could misguide a user and lead to an awkward and poor conversation with a potential customer. As in writing, you want to pretend like you’re writing to your most intelligent friend. Willfully keeping your friend ignorant may not be the best decision.</p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/austionian">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Background"><span class="toc-number">1.</span> <span class="toc-text">Background</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Query"><span class="toc-number">2.</span> <span class="toc-text">The Query</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Javascript"><span class="toc-number">3.</span> <span class="toc-text">The Javascript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Results-Implications"><span class="toc-number">4.</span> <span class="toc-text">Results/ Implications</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/&text=Adding Query Params to a WordPress Site"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/&title=Adding Query Params to a WordPress Site"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/&is_video=false&description=Adding Query Params to a WordPress Site"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Adding Query Params to a WordPress Site&body=Check out this article: http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/&title=Adding Query Params to a WordPress Site"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/&title=Adding Query Params to a WordPress Site"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/&title=Adding Query Params to a WordPress Site"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/&title=Adding Query Params to a WordPress Site"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://rooksbooksblog.com/2017/05/11/Adding-Query-Params-to-a-WordPress-Site/&name=Adding Query Params to a WordPress Site&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2017 Austin Rooks
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/austionian">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
