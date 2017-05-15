@@ -5,14 +5,14 @@
 # Site
 title: Rooks Blog
 subtitle: An Advent of Thoughts on Stuff
-description: A blog about tech and books
+description: A blog about tech and books. 'Why tech and books?' you ask. Because it's my blog and I'm going to blog about what I want to dang blog about.
 author: Austin Rooks
 language: en
 timezone: america/chicago
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://rooksbooksblog.com
+url: http://rooksblog.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
