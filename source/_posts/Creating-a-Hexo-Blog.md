@@ -24,7 +24,7 @@ You think you're set and you're served a build error:
 <br />
 >You are attempting to use a Jekyll theme, "cactus-dark", which is not supported by GitHub Pages. Please visit https://pages.github.com/themes/ for a list of supported themes
 
-And alas Jekyll themes are circa 2012 and look like it. So new plan, I'll host with something else.
+And alas Jekyll themes are circa 2012 and look like it. While I'm sure there's a way around this, I didn't really want to find it––so new plan, I'll host with something else.
 
 ## Heroku, and how to deploy Hexo to it in 7 easy steps
 
@@ -34,7 +34,7 @@ Hexo doesn't do a great job explaining the deployment process to Heroku, it give
   + when you run `$ hexo generate` Hexo generates static files of your blog and puts them in the `public/` directory
   + once `public/` is no longer ignored, Heroku can see the files it needs to host your site
 3. add `engines` to your `package.json`, it seems odd they're not there out of the box with Hexo. It should look like:
-```
+```json
 "engines": {
   "node": "7.1.0",
   "npm": "3.10.9"
