@@ -1,6 +1,6 @@
 ---
 title: Adding Query Params to a WordPress Site
-date: 2017-05-11 15:40:42
+date: 2017-05-15 15:40:42
 tags:
 - tech
 - WordPress
