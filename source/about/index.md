@@ -7,6 +7,6 @@ I'm somewhat new to developing. In the past I was more of a product/ customer en
 
 This is my dog Pippa––
 
-![my dog pippa](/images/pippa/pip-eight copy.png)
+![my dog pippa](/images/pippa/pip-eighth.png)
 
 [You can also find me here.](http://austinrooks.com)
