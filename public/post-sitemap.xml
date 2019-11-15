@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://rooksblog.com/2019/11/15/List/</loc>
+        <lastmod>2019-11-15T17:07:38.546Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://rooksblog.com/2017/05/15/Adding-Query-Params-to-a-WordPress-Site/</loc>
         <lastmod>2017-05-15T22:17:25.000Z</lastmod>
         <changefreq>weekly</changefreq>

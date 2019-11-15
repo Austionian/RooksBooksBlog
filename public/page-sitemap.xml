@@ -7,6 +7,13 @@
     </url>
     
     <url>
+        <loc>http://rooksblog.com/projects/</loc>
+        <lastmod>2017-05-23T17:56:02.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>http://rooksblog.com/about/</loc>
         <lastmod>2017-05-15T22:13:44.000Z</lastmod>
         <changefreq>weekly</changefreq>
