@@ -8,7 +8,7 @@
     "posttheme:update": "cd ../.."
   },
   "hexo": {
-    "version": "3.3.5"
+    "version": "3.9.0"
   },
   "dependencies": {
     "hexo": "^3.2.0",
