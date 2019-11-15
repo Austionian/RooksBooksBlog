@@ -6,7 +6,7 @@ tags:
 - Highcharts
 ---
 
-![Giphy Lynch](source/images/giphyLynch.gif)
+![Giphy Lynch](/images/giphyLynch.gif)
 
 ## the need
 I created in SharePoint a tool to report critical incidents that occur in programs across the agency. A critical incident happens, a user fills out the InfoPath form, a SharePoint workflow routes the information to necessary parties and all relevant parties are privy to what happened in a matter of minutes. That's great, but when looking for trends across programs and within the programs themselves, we were relying on importing the information from the critical incident SharePoint list to Excel and doing the data analysis from there.
@@ -16,7 +16,7 @@ Every time someone wanted to analyze the data, they had to update the data, maki
 Static, involved, and cumbersome.
 
 At one point, we just embedded the Excel onto a SharePoint page:
-![R1v3t1ng](source/images/highchartsSP/excelIncidents.PNG)
+![R1v3t1ng](/images/highchartsSP/excelIncidents.PNG)
 
 ## the implementation
 
@@ -231,4 +231,4 @@ function DrawChart(render, data) {
 As you can see, I'm passing where I want to render the graph and also the data to the JSON that Highcharts is looking for.
 
 ## the end result
-![Bubble GIF](source/images/highchartsSP/finalGif.gif)
+![Bubble GIF](/images/highchartsSP/fiscalGif.gif)
