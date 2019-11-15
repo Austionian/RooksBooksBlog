@@ -9,7 +9,7 @@ tags:
 ![Giphy Lynch](/images/giphyLynch.gif)
 
 ## the need
-I created in SharePoint a tool to report critical incidents that occur in programs across the agency. A critical incident happens, a user fills out the InfoPath form, a SharePoint workflow routes the information to necessary parties and all relevant parties are privy to what happened in a matter of minutes. That's great, but when looking for trends across programs and within the programs themselves, we were relying on importing the information from the critical incident SharePoint list to Excel and doing the data analysis from there.
+I a SharePoint tool to report critical incidents that occur in programs across the agency. A critical incident happens, a user fills out the InfoPath form, a SharePoint workflow routes the information to necessary parties and eveyone is informed as to what happened in a matter of minutes. That's great, but when looking for trends across programs and within the programs themselves, we were relying on importing the information from the critical incident SharePoint list to Excel and doing the data analysis from there.
 
 Every time someone wanted to analyze the data, they had to update the data, making the manipulations and make use of Excel's graphing options.
 
@@ -95,7 +95,7 @@ function getItemsFromList(listTitle, queryText) {
               }
 ```
 
-At this point my *seriesarray* array looks something like this:
+At this point my `seriesarray` array looks something like this:
 ```javascript
 [{name: programName, data: incident}, {name: programName, data: incident}, {name: programName2, data: incident}]
 ```
@@ -125,7 +125,7 @@ Then:
     concatData(seriesarray, output);
 ```
 
-Now my *output* array has everything together, but I need to count the incidents of the same type in each program, so that I can graph it:
+Now my `output` array has everything together, but I need to count the incidents of the same type in each program, so that I can graph it:
 ```javascript
 function mapper (input) {
   for (var i = 0; i < input.length; i ++) {
@@ -155,9 +155,9 @@ function mapper (input) {
 }
 ```
 
-So one more time I have a function to better clean the data to accumulate same incidents in a program with the ```reduce``` function and also get the total number of incidents in each program.
+So one more time I have a function to better clean the data to accumulate same incidents in a program with the `reduce` function and also get the total number of incidents in each program.
 
-Now the *finalData* array is looking like what Highcharts is expecting. To complete the ```getItemsFromList``` function from above:
+Now the `finalData` array is looking like what Highcharts is expecting. To complete the `getItemsFromList` function from above:
 ```javascript
 mapper(output);
               DrawChart('bubble-container', finalData);
